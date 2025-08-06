@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-300 dark">
+
+    
+<!-- Mirrored from popusol.fun/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 20 Jul 2025 17:18:19 GMT -->
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+        <title>$PENGZ</title>
+        <meta property="og:title" content="$PENGZ" />
+        <meta property="og:description" content="PENGZ" />
+        <meta property="og:image" content="main.png" />
+        <meta property="og:image:secure_url" content="main.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:alt" content="PENGZ" />
+        <meta property="og:url" content="index.html" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="PENGZ" />
+        <meta property="og:locale" content="en_US" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="style.css?v=2">
+        <link rel="stylesheet" href="../unpkg.com/aos%402.3.4/dist/aos.css" />
+        <script>
+            // Theme toggle logic
+            document.addEventListener('DOMContentLoaded', function () {
+                const html = document.documentElement;
+                const themeBtn = document.getElementById('theme-toggle');
+                // Initial theme
+                const saved = localStorage.getItem('theme');
+                if (saved === 'light') {
+                    html.classList.remove('dark');
+                } else {
+                    html.classList.add('dark');
+                }
+                // Toggle
+                themeBtn && themeBtn.addEventListener('click', function () {
+                    if (html.classList.contains('dark')) {
+                        html.classList.remove('dark');
+                        localStorage.setItem('theme', 'light');
+                    } else {
+                        html.classList.add('dark');
+                        localStorage.setItem('theme', 'dark');
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body class="min-h-screen bg-gray-950 text-white transition-colors duration-300" style="margin:0;padding:0;background-color:var(--bg-primary)">
+        <!-- Navbar -->
+        <nav class="navbar-overlay" data-aos="fade-down" data-aos-delay="1200">
+            <div class="nav-content">
+                <!-- Logo Left -->
+                <div class="flex items-center">
+                    <a href="#hero"><img src="images/logo/tetx.svg" alt="PENGZ logo" class="w-20 "></a>
+                </div>
+                <!-- Menu Center (hidden on mobile) -->
+                <div class="hidden md:flex gap-8 text-lg font-medium">
+                    <a href="https://x.com/PengzAbstract" target="_blank" rel="noopener" class="btn-social flex items-center gap-1 hover:text-[#1344B3] transition">
+                        <img src="images/social/x.png" alt="X" class=" w-7 h-7 hover:scale-110 transition-transform duration-300">
+                    </a>
+                    <a href="https://t.me/PengzAbstract" target="_blank" rel="noopener" class=" btn-social flex items-center gap-1 hover:text-[#1a5bd8] transition">
+                        <img src="images/social/t.png" alt="Telegram" class=" w-7 h-7 hover:scale-110 transition-transform duration-300">
+                    </a>
+                    <div class="btn-social flex items-center gap-1">
+                        <img src="images/social/dex.png" alt="dex" class=" w-7 h-7">
+                    </div>
+                </div>
+                <!-- Right Buttons -->
+                <div class="flex items-center gap-2">
+                    <a id="buy-link-navbar" href="https://letsbonk.fun/token/" target="_blank" rel="noopener" class="btn-buy">buy $PENGZ</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Hero Section -->
+        <section id="hero" class="parallax-container hero-fullscreen" style="position:relative;">
+            <!-- Background Parallax Stack -->
+            <div class="hero-parallax-container">
+                <!-- Background layers dengan parallax effect -->
+                <img src="images/parallax/5.png?v=3" alt="PENGZ bg layer 5" class="parallax-layer layer-5" data-depth="0.1">
+                <img src="images/parallax/4.png?v=3" alt="PENGZ bg layer 4" class="parallax-layer layer-4" data-depth="0.2">
+                <img src="images/parallax/3.png?v=3" alt="PENGZ bg layer 3" class="parallax-layer layer-3" data-depth="0.3">
+                <img src="images/parallax/2.png?v=3" alt="PENGZ bg layer 2" class="parallax-layer layer-2" data-depth="0.4">
+                <img src="images/parallax/1.png?v=4" alt="PENGZ bg layer 1" class="parallax-layer layer-1" data-depth="0.5">
+            </div>
+
+            <!-- Overlay di bagian paling depan -->
+            <div class="primary-gradient-overlay"></div>
+
+
+            <!-- Hero Content -->
+            <div class="hero-content w-full max-w-2xl mx-auto flex flex-col items-center text-center gap-4 px-4">
+                <img src="images/logo/tetx.svg" alt="PENGZ" class="h-30 md:h-80" data-aos="fade-up">
+
+                <div class="flex flex-col md:flex-row gap-4 items-center justify-center hidden">
+                    <span id="price-usd" class="text-2xl font-extrabold text-[#1344B3]">coming soon</span>
+                    <span id="price-native" class="text-xl text-gray-300">coming soon</span>
+                    <span id="price-change-h24" class="text-xl font-semibold">coming soon</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 w-full justify-center mb-2" data-aos="fade-up" data-aos-delay="200">
+
+                    <a href="#memes-sec" class="btn-secondary text-white">memes</a>
+                    <div class="btn-buy te">buy now</div>
+                    <div class="btn-secondary te">view chart</div>
+                </div>
+
+                <!-- Contract Address Display -->
+                <div class="contract-address-display mb-2" data-aos="fade-up" data-aos-delay="250">
+                    <div class="contract-address-box">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-400 text-sm">CA:</span>
+                        </div>
+                        <button class="copy-btn" onclick="copyContractAddress()">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Copy CA Button -->
+                <div class="flex justify-center mb-2" data-aos="fade-up" data-aos-delay="300">
+                    <button class="btn-secondary text-white" onclick="copyContractAddress()">
+                        Copy CA
+                    </button>
+                </div>
+
+                <!-- Contract Address Display (Hidden) -->
+                <div class="hidden">
+                    <span id="contract-address">coming soon</span>
+                </div>
+                <!-- Hidden elements for script compatibility -->
+                <img id="header-image" class="hidden" alt="Header Image" style="display: none;" />
+                <span id="header-placeholder" class="hidden" style="display: none;"></span>
+                <img id="token-logo" class="hidden" alt="Token Logo" style="display: none;" />
+                <span id="logo-placeholder" class="hidden" style="display: none;"></span>
+            </div>
+        </section>
+        <!-- New Section After Hero -->
+        <section class="max-w-full mx-0 px-0 py-16" data-aos="fade-up">
+            <img src="images/logo/text-2.svg" alt="" class="w-full">
+        </section>
+
+
+
+        <!-- Image Grid Section -->
+        <section id="memes-sec" class="w-full px-5" data-aos="fade-up">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-[#22c55e] via-[#16a34a] to-[#15803d] bg-clip-text text-transparent">PENGZ MEMES</h2>
+                <p class="text-lg text-gray-300">for the culture</p>
+            </div>
+
+            <div  class="masonry-container">
+                <!-- Column 1 -->
+                <div class="masonry-column">
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_1.avif?v=2" alt="PENGZ Meme 1" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_4.avif?v=2" alt="PENGZ Meme 4" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_7.avif?v=2" alt="PENGZ Meme 7" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_10.avif?v=2" alt="PENGZ Meme 10" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_13.avif?v=2" alt="PENGZ Meme 13" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_16.avif?v=2" alt="PENGZ Meme 16" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_19.avif?v=2" alt="PENGZ Meme 19" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_22.avif?v=2" alt="PENGZ Meme 22" class="meme-image">
+                        </div>
+                    </div>
+
+
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_28.avif?v=2" alt="PENGZ Meme 28" class="meme-image">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="masonry-column">
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_2.avif?v=2" alt="PENGZ Meme 2" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_5.avif?v=2" alt="PENGZ Meme 5" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_8.avif?v=2" alt="PENGZ Meme 8" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_11.avif?v=2" alt="PENGZ Meme 11" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_14.avif?v=2" alt="PENGZ Meme 14" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_17.avif?v=2" alt="PENGZ Meme 17" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_20.avif?v=2" alt="PENGZ Meme 20" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_23.avif?v=2" alt="PENGZ Meme 23" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_26.avif?v=2" alt="PENGZ Meme 26" class="meme-image">
+                        </div>
+                    </div>
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_25.avif?v=2" alt="PENGZ Meme 25" class="meme-image">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="masonry-column">
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_3.avif?v=2" alt="PENGZ Meme 3" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_6.avif?v=2" alt="PENGZ Meme 6" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_9.avif?v=2" alt="PENGZ Meme 9" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_12.avif?v=2" alt="PENGZ Meme 12" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_15.avif?v=2" alt="PENGZ Meme 15" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_18.avif?v=2" alt="PENGZ Meme 18" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_21.avif?v=2" alt="PENGZ Meme 21" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_24.avif?v=2" alt="PENGZ Meme 24" class="meme-image">
+                        </div>
+                    </div>
+
+                    <div class="meme-card group">
+                        <div class="meme-image-container">
+                            <img src="images/meme/images_27.avif?v=2" alt="PENGZ Meme 27" class="meme-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="w-full py-6 backdrop-blur text-center text-gray-400 text-sm mt-10 shadow-inner">
+                            &copy; 2025 PENGZ. All rights reserved.
+        </footer>
+
+        <!-- Floating Back to Top Button -->
+        <div id="floating-button" class="fixed bottom-50 right-6 z-50 transform translate-y-full transition-all duration-500 ease-out cursor-pointer">
+            <a href="#hero" class="block">
+                <img src="images/logo/push.png?v=2" alt="Back to Top" class="w-50 object-contain hover:scale-110 transition-transform duration-300">
+            </a>
+        </div>
+
+        <script src="tweet-embeds.js"></script>
+        <script src="script.js"></script>
+        <script src="../unpkg.com/lenis%401.3.4/dist/lenis.min.js"></script>
+        <script src="../unpkg.com/aos%402.3.4/dist/aos.js"></script>
+        <script src="../unpkg.com/vanilla-tilt%401.8.1/dist/vanilla-tilt.min.js"></script>
+        <!-- Twitter Widget SDK -->
+        <script async src="../platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script>
+            // Inisialisasi Lenis untuk smooth scroll
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easeOutExpo
+                smooth: true,
+                smoothTouch: false,
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+
+            requestAnimationFrame(raf);
+
+            // Smooth scroll untuk anchor link
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href').slice(1);
+                    const target = document.getElementById(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        lenis.scrollTo(target, { offset: 0 });
+                    }
+                });
+            });
+
+            // Inisialisasi AOS
+            AOS.init({
+                duration: 900,
+                once: true,
+                offset: 80
+            });
+
+            VanillaTilt.init(document.querySelectorAll(".card"), {
+                max: 18,
+                speed: 600,
+                glare: true,
+                "max-glare": 0.18,
+                scale: 1.04,
+                perspective: 1200,
+            });
+
+            // Initialize Twitter embeds
+            document.addEventListener('DOMContentLoaded', function () {
+                console.log('🐦 Initializing Twitter embeds...');
+
+                // The initTwitterEmbeds function will be called from script.js
+                // It will handle loading states and SDK detection automatically
+            });
+        </script>
+    </body>
+
+
+<!-- Mirrored from popusol.fun/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 20 Jul 2025 17:18:33 GMT -->
+</html>
