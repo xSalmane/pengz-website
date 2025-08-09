@@ -281,41 +281,7 @@ function showNotification(message, type = "info") {
 	});
 }
 
-/**
- * Initialize floating button functionality
- */
-function initFloatingButton() {
-	const floatingButton = document.getElementById("floating-button");
-	let lastScrollY = window.scrollY;
-	let isScrollingDown = false;
 
-	function handleScroll() {
-		const currentScrollY = window.scrollY;
-		const windowHeight = window.innerHeight;
-		const documentHeight = document.documentElement.scrollHeight;
-		const scrollPercentage =
-			(currentScrollY / (documentHeight - windowHeight)) * 100;
-
-		// Determine scroll direction
-		isScrollingDown = currentScrollY > lastScrollY;
-		lastScrollY = currentScrollY;
-
-		// Show button when scroll 60% down and scrolling down
-		if (scrollPercentage >= 60 && isScrollingDown) {
-			floatingButton.classList.add("show");
-		}
-		// Hide button when scrolling up
-		else if (isScrollingDown === false) {
-			floatingButton.classList.remove("show");
-		}
-	}
-
-	// Add scroll event listener
-	window.addEventListener("scroll", handleScroll, { passive: true });
-
-	// Initial check
-	handleScroll();
-}
 
 // ==========================================================
 // INITIALIZATION
@@ -328,8 +294,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	initParallaxEffect();
 	initHeroParallax();
 
-	// Initialize floating button
-	initFloatingButton();
+
 
 	// Update CA display immediately
 	updateContractAddressDisplay();
@@ -368,4 +333,4 @@ window.updateContractAddressDisplay = updateContractAddressDisplay;
 window.updateDynamicLinks = updateDynamicLinks;
 window.initParallaxEffect = initParallaxEffect;
 window.initHeroParallax = initHeroParallax;
-window.initFloatingButton = initFloatingButton;
+
