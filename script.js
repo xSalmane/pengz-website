@@ -2,7 +2,7 @@
 // KONFIGURASI KOIN
 // ==========================================================
 const COIN_CONFIG = {
-	contractAddress: "GcphBUNWgTJ6xEsUjsjrBbHPuKHXJFLC3zbjatWYbonk",
+	contractAddress: "coming soon",
 	chainId: "solana",
 	totalSupply: 1000000000,
 };
@@ -214,30 +214,16 @@ function initHeroParallax() {
  * Update dynamic links with contract address
  */
 function updateDynamicLinks() {
-	const contractAddress = COIN_CONFIG.contractAddress;
 	const buyLink = document.getElementById("buy-link");
 	const buyLinkNavbar = document.getElementById("buy-link-navbar");
 	const chartLink = document.getElementById("chart-link");
 
-	if (
-		!contractAddress ||
-		contractAddress.trim() === "" ||
-		contractAddress === "coming soon"
-	) {
-		// Set default links if no contract address
-		if (buyLink) buyLink.href = "https://letsbonk.fun/";
-		if (buyLinkNavbar) buyLinkNavbar.href = "https://letsbonk.fun/";
-		if (chartLink) chartLink.href = "https://dexscreener.com/solana";
-		console.log("⚠️ No contract address, using default links");
-	} else {
-		// Update links with contract address
-		if (buyLink) buyLink.href = `https://letsbonk.fun/token/${contractAddress}`;
-		if (buyLinkNavbar)
-			buyLinkNavbar.href = `https://letsbonk.fun/token/${contractAddress}`;
-		if (chartLink)
-			chartLink.href = `https://dexscreener.com/solana/${contractAddress}`;
-		console.log("✅ Links updated with contract address:", contractAddress);
-	}
+	// Always set links to DexScreener homepage
+	if (buyLink) buyLink.href = "https://dexscreener.com";
+	if (buyLinkNavbar) buyLinkNavbar.href = "https://dexscreener.com";
+	if (chartLink) chartLink.href = "https://dexscreener.com";
+	
+	console.log("✅ All buy links set to DexScreener homepage");
 }
 
 /**
