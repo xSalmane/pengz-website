@@ -2,7 +2,7 @@
 // KONFIGURASI KOIN
 // ==========================================================
 const COIN_CONFIG = {
-	contractAddress: "coming soon",
+	contractAddress: "0xE851AA3A4417c88786126C17658Da03328c94A17",
 	chainId: "solana",
 	totalSupply: 1000000000,
 };
@@ -218,12 +218,14 @@ function updateDynamicLinks() {
 	const buyLinkNavbar = document.getElementById("buy-link-navbar");
 	const chartLink = document.getElementById("chart-link");
 
-	// Always set links to DexScreener homepage
-	if (buyLink) buyLink.href = "https://dexscreener.com";
-	if (buyLinkNavbar) buyLinkNavbar.href = "https://dexscreener.com";
-	if (chartLink) chartLink.href = "https://dexscreener.com";
+	// Set all links to the specific DexScreener token page
+	const dexScreenerUrl = "https://dexscreener.com/abstract/0xE851AA3A4417c88786126C17658Da03328c94A17";
 	
-	console.log("✅ All buy links set to DexScreener homepage");
+	if (buyLink) buyLink.href = dexScreenerUrl;
+	if (buyLinkNavbar) buyLinkNavbar.href = dexScreenerUrl;
+	if (chartLink) chartLink.href = dexScreenerUrl;
+	
+	console.log("✅ All buy links set to DexScreener token page:", dexScreenerUrl);
 }
 
 /**
