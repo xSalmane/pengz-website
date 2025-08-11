@@ -3,7 +3,7 @@
 // ==========================================================
 const COIN_CONFIG = {
 	contractAddress: "0xE851AA3A4417c88786126C17658Da03328c94A17",
-	chainId: "solana",
+	chainId: "abstract",
 	totalSupply: 1000000000,
 };
 
